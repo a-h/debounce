@@ -1,4 +1,4 @@
-package push
+package debounce
 
 import (
 	"sync"
