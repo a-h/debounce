@@ -21,11 +21,7 @@ func main() {
 	// Set your GPIO here
 	gpio := rpio.Pin(0)
 	rpio.PinMode(gpio, rpio.Input)
-	getgpio := func() {
-		for {
-			sw.SetState(rpio.ReadPin(gpio) == rpio.High)
-		}
+	for {
+		sw.SetState(rpio.ReadPin(gpio) == rpio.High)
 	}
-	go getgpio()
-
 }
